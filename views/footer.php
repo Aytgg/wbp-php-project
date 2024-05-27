@@ -61,7 +61,7 @@
                 </div>
                 <div class="col-md-6 col-lg-4 text-md-right">
                     <p class="mb-0 list-unstyled">
-                        <a class="mr-md-3" href="<?= $_ENV['BASE_PATH'] ?>">
+                        <a class="mr-md-3" href="./">
                             <button class="btn btn-primary"> Ana Sayfa </button>
                         </a>
                         <a class="mr-md-3" href="https://github.com/Aytgg">

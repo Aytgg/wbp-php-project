@@ -1,7 +1,5 @@
 <?php
-require_once ('./views/header.php');
-
-use Project\Handlers\User;
+require_once 'header.php';
 
 if (!isset($_SESSION['username'])) {
     $err = "Önce giriş yapmalısınız!";
@@ -60,5 +58,5 @@ $stmt = $DB->query("SELECT * FROM users");
 </script>
 
 <?php
-require_once ('./views/footer.php');
+require_once 'footer.php';
 ?>

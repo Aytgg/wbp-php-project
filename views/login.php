@@ -1,7 +1,5 @@
 <?php
-require_once ('header.php');
-
-use Project\Handlers\User;
+require_once 'header.php';
 
 if (isset($_SESSION['username'])) {
   $err = "Zaten giriş yaptın, " . $_SESSION['username'] . "!";
@@ -29,7 +27,7 @@ if (isset($_SESSION['username'])) {
                     <p class="text-white-50 mb-5">
                         Giriş yapmak için kullanıcı adı ve parolanızı girin.
                     </p>
-                    <form class="form" action="/login" method="POST">
+                    <form class="form" action="./login" method="POST">
                         <div class="form-outline mb-4">
                             <input name="username" type="username" placeholder="Kullanıcı Adı"
                                 class="form-control form-control-lg" required />
@@ -59,5 +57,5 @@ if (isset($_SESSION['username'])) {
 </div>
 
 <?php
-include_once ('footer.php');
+include_once 'footer.php';
 ?>

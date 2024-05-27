@@ -2,6 +2,8 @@
 
 namespace Project\Classes;
 
+require_once __DIR__ . '/envloader.php';
+
 use PDO;
 use PDOException;
 

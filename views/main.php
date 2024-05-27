@@ -1,5 +1,5 @@
 <?php
-require_once ('./views/header.php');
+require_once 'header.php';
 
 if (isset($_SESSION['TOKEN']) && isset($_SESSION['username'])) {
     echo "<div class='container'><h1>Home page - " . $_SESSION['username'] . "</h1>
@@ -27,4 +27,4 @@ if (isset($_SESSION['TOKEN']) && isset($_SESSION['username'])) {
             </a>
         </div>";
 
-require_once ('./views/footer.php');
+require_once 'footer.php';

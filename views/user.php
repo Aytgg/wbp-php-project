@@ -1,7 +1,5 @@
 <?php
-require_once ('header.php');
-
-use Project\Handlers\User;
+require_once 'header.php';
 
 if (!isset($_SESSION['username'])) {
   $err = "Önce giriş yapmalısınız!";
@@ -64,5 +62,5 @@ if (empty($user)) {
 <hr>
 
 <?php
-require_once ('footer.php');
+require_once 'footer.php';
 ?>

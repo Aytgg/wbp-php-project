@@ -3,6 +3,8 @@
 namespace Project\Handlers;
 
 use Project\Classes\DB;
+use PDO;
+use PDOException;
 
 class User
 {
@@ -22,11 +24,18 @@ class User
             !empty($_POST['username']) &&
             !empty($_POST['password'])
         ) {
-            $DB = (new DB())->connect();
-
-            $stmt = $DB->prepare("SELECT * FROM users WHERE username = ?");
-            $stmt->execute([$_POST['username']]);
-
+            try {
+                $DB = (new DB())->connect();
+                
+                $stmt = $DB->prepare("SELECT * FROM users WHERE username = ?");
+                $stmt->execute([$_POST['username']]);
+            } catch (PDOException $e) {
+                echo ''. $e->getMessage();
+                throw new PDOException('' . $e->getMessage());
+            }
+                
+                
+                
             $user = $stmt->fetch();
             if ($user) {
                 if (

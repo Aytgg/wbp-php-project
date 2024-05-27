@@ -1,5 +1,5 @@
 <?php
-include_once ('header.php');
+require_once 'header.php';
 ?>
 
 <div class="container py-5">
@@ -22,5 +22,5 @@ include_once ('header.php');
 </div>
 
 <?php
-include_once ('footer.php');
+require_once 'footer.php';
 ?>
