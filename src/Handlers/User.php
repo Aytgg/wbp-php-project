@@ -24,18 +24,11 @@ class User
             !empty($_POST['username']) &&
             !empty($_POST['password'])
         ) {
-            try {
-                $DB = (new DB())->connect();
-                
-                $stmt = $DB->prepare("SELECT * FROM users WHERE username = ?");
-                $stmt->execute([$_POST['username']]);
-            } catch (PDOException $e) {
-                echo ''. $e->getMessage();
-                throw new PDOException('' . $e->getMessage());
-            }
-                
-                
-                
+            $DB = (new DB())->connect();
+            
+            $stmt = $DB->prepare("SELECT * FROM users WHERE username = ?");
+            $stmt->execute([$_POST['username']]);
+
             $user = $stmt->fetch();
             if ($user) {
                 if (
@@ -43,10 +36,10 @@ class User
                     password_verify($_POST['password'], $user['password'])
                 ) {
                     $_SESSION['username'] = $user['username'];
-                    header('Location: /');
-
                     $_SESSION['TOKEN'] = md5(sha1($user['username'] . $user['password']));
                     setcookie('TOKEN', $_SESSION['TOKEN'], time() + 60 * 60 * 24); // giriş tokenini tutan 1 günlük cookie
+                    
+                    header('Location: /');
                     /*
 
                     if md5(sha1($user->username . $user->password) != $_SESSION['TOKEN'])) {
