@@ -4,7 +4,7 @@ namespace Project\Classes;
 
 class Router
 {
-    private array $callbacks;
+    private array $callbacks = [];
     private $notFoundHandler;
     private const METHOD_GET = 'GET';
     private const METHOD_POST = 'POST';
