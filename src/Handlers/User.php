@@ -124,13 +124,7 @@ class User
 
     public static function userPage($params): void
     {
-        require_once __DIR__ . '/../../views/user.php';
-    }
-
-    public static function update($params): void
-    {
         if (isset($params['id'])) {
-            
             $DB = (new DB())->connect();
             
             $stmt = $DB->prepare("SELECT * FROM users WHERE ID = ?");
@@ -155,6 +149,27 @@ class User
                 }
 
                 $err = "Üye başarıyla silindi!";
+                require_once __DIR__ . '/../../views/userError.php';
+                return;
+            }
+
+        }
+        require_once __DIR__ . '/../../views/user.php';
+    }
+
+    public static function update($params): void
+    {
+        if (isset($params['id'])) {
+            
+            $DB = (new DB())->connect();
+            
+            $stmt = $DB->prepare("SELECT * FROM users WHERE ID = ?");
+            $stmt->execute([$params["id"]]);
+            
+            $user = $stmt->fetch();
+
+            if (empty($user)) {
+                $err = "Kullanıcı bulunamadı!";
                 require_once __DIR__ . '/../../views/userError.php';
                 return;
             }
