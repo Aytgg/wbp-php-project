@@ -4,15 +4,6 @@ require_once 'header.php';
 if (isset($_SESSION['username'])) {
   $err = "Zaten giriş yaptın, " . $_SESSION['username'] . "!";
   require_once __DIR__ . '/userError.php';
-//   echo
-//     "<div class='container'>
-//       </br>
-//       <h2> Önce giriş yapmalısınız! </h2>
-//       </br>
-//       <a href='/login'>
-//           <button class='btn btn-primary'> Giriş Yap </button>
-//       </a>
-//   </div>";
   return;
 }
 
@@ -32,9 +23,6 @@ if (isset($_SESSION['username'])) {
                             <input name="username" type="username" placeholder="Kullanıcı Adı"
                                 class="form-control form-control-lg" required />
                         </div>
-                        <!-- <div class="form-outline mb-4">
-                            <input name="email" type="email" placeholder="E-Mail Address" class="form-control form-control-lg" required />
-                        </div> -->
                         <div class="form-outline mb-4">
                             <input name="password" type="password" placeholder="Parola"
                                 class="form-control form-control-lg" required />
