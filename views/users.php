@@ -40,7 +40,7 @@ $stmt = $DB->query("SELECT * FROM users");
                             <a href="./user?id=<?= $user['ID'] ?>">
                                 <button class="btn btn-primary"> Düzenle </button>
                             </a>
-                            <button class="btn btn-danger" onClick="return deleteUser(<?= $user['ID'] ?>);"> Sil </button>
+                            <button class="btn btn-danger" onClick="return deleteUser(<?= $user['ID'] ?>, '<?= $user['username'] ?>');"> Sil </button>
                         </td>
                     </tr>
                 <?php endforeach ?>
@@ -49,8 +49,8 @@ $stmt = $DB->query("SELECT * FROM users");
 </div>
 
 <script>
-    function deleteUser(id) {
-        if (confirm("<?= $user['username'] ?> isimli üyeye dair her şey silinecektir.\nOnaylıyor musunuz?")) {
+    function deleteUser(id, username) {
+        if (confirm(username + " isimli üyeye dair her şey silinecektir.\nOnaylıyor musunuz?")) {
             window.location = 'user?id=' + id + '&delete=true';
             return;
         }
