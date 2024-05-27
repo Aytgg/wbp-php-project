@@ -10,9 +10,9 @@ if (!is_readable($env_file_path)) {
     throw new ErrorException("Permission Denied for reading the " . ($env_file_path) . ".");
 }
 //Check .envenvironment file is writable
-if (!is_writable($env_file_path)) {
-    throw new ErrorException("Permission Denied for writing on the " . ($env_file_path) . ".");
-}
+// if (!is_writable($env_file_path)) {
+//     throw new ErrorException("Permission Denied for writing on the " . ($env_file_path) . ".");
+// }
 
 $var_arrs = array();
 // Open the .en file using the reading mode

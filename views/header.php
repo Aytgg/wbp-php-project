@@ -26,16 +26,16 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <!-- Navbar brand -->
                 <a class="navbar-brand mt-2 mt-lg-0" href="#">
-                    <img src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp" height="15"
+                    <img src="data:image/jpeg;base64,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" height="15"
                         alt="MDB Logo" loading="lazy" />
                 </a>
                 <!-- Left links -->
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="/"> Ana Sayfa </a>
+                        <a class="nav-link" href="<?= $_ENV['BASE_PATH'] ?>/"> Ana Sayfa </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/users"> Üyeler </a>
+                        <a class="nav-link" href="<?= $_ENV['BASE_PATH'] ?>/users"> Üyeler </a>
                     </li>
                 </ul>
                 <!-- Left links -->
@@ -52,7 +52,7 @@
                 </a>
                 
                 <!-- Icon -->
-                <a class="text-reset me-3" href="/logout">
+                <a class="text-reset me-3" href="<?= $_ENV['BASE_PATH'] ?>/logout">
                     <label></label>
                     <i class="fas fa-sign-out"></i>
                 </a>

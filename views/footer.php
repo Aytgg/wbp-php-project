@@ -61,17 +61,17 @@
                 </div>
                 <div class="col-md-6 col-lg-4 text-md-right">
                     <p class="mb-0 list-unstyled">
-                        <a class="mr-md-3" href="/">
+                        <a class="mr-md-3" href="<?= $_ENV['BASE_PATH'] ?>">
                             <button class="btn btn-primary"> Ana Sayfa </button>
                         </a>
                         <a class="mr-md-3" href="https://github.com/Aytgg">
                             <button class='btn btn-warning'> Github </button>
                         </a>
                         </br></br>
-                        <a class="mr-md-3" href="/login">
+                        <a class="mr-md-3" href="<?= $_ENV['BASE_PATH'] ?>/login">
                             <button class="btn btn-success"> Giriş Yap </button>
                         </a>
-                        <a class="mr-md-3" href='/logout'>
+                        <a class="mr-md-3" href="<?= $_ENV['BASE_PATH'] ?>/logout">
                             <button class='btn btn-danger'> Çıkış Yap </button>
                         </a>
                     </p>
