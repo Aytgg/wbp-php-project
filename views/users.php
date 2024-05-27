@@ -39,7 +39,7 @@ $stmt = $DB->query("SELECT * FROM users");
                         <td> <?= $user['username'] ?> </td>
                         <td> <?= $user['email'] ?> </td>
                         <td>
-                            <a href="/user?id=<?= $user['ID'] ?>">
+                            <a href="./user?id=<?= $user['ID'] ?>">
                                 <button class="btn btn-primary"> Düzenle </button>
                             </a>
                             <button class="btn btn-danger" onClick="return deleteUser(<?= $user['ID'] ?>);"> Sil </button>

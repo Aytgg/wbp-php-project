@@ -7,13 +7,13 @@ include_once ('header.html');
     <br>
 
     <?php if (isset($_SESSION['username']) && $err == "Zaten giriş yaptın, " . $_SESSION['username'] . "!"): ?>
-    <a href="/logout">
+    <a href="./logout">
         <button class="btn btn-danger"> Çıkış Yap </button>
     </a>
     <?php elseif ($err != "Kullanıcı başarıyla güncellendi!")
     //(($err == "Önce giriş yapmalısınız!") || ($err == "Kullanıcı bulunamadı!") || ($err = "Hatalı Parola!"))
     : ?>
-    <a href='/login'>
+    <a href='./login'>
         <button class='btn btn-success'> Giriş Yap </button>
     </a>
     <?php endif ?>
