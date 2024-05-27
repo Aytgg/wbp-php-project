@@ -1,5 +1,5 @@
 <?php
-require_once ('header.html');
+require_once ('header.php');
 
 use Project\Handlers\User;
 
@@ -59,5 +59,5 @@ if (isset($_SESSION['username'])) {
 </div>
 
 <?php
-include_once ('footer.html');
+include_once ('footer.php');
 ?>

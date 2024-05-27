@@ -68,10 +68,10 @@
                             <button class='btn btn-warning'> Github </button>
                         </a>
                         </br></br>
-                        <a class="mr-md-3" href="<?= $_ENV['BASE_PATH'] ?>/login">
+                        <a class="mr-md-3" href="./login">
                             <button class="btn btn-success"> Giriş Yap </button>
                         </a>
-                        <a class="mr-md-3" href="<?= $_ENV['BASE_PATH'] ?>/logout">
+                        <a class="mr-md-3" href="./logout">
                             <button class='btn btn-danger'> Çıkış Yap </button>
                         </a>
                     </p>

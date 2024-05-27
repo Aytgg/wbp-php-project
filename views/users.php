@@ -1,5 +1,5 @@
 <?php
-require_once ('./views/header.html');
+require_once ('./views/header.php');
 
 use Project\Handlers\User;
 
@@ -60,5 +60,5 @@ $stmt = $DB->query("SELECT * FROM users");
 </script>
 
 <?php
-require_once ('./views/footer.html');
+require_once ('./views/footer.php');
 ?>
