@@ -8,11 +8,11 @@ use PDOException;
 class DB
 {
     private $conn;
-    private const HOST = "localhost";
-    private const DB = "halkdiyorkixyz_projectofwbp";
-    private const USER = "halkdiyorkixyz_projectofwbp";
-    private const PW = ")n5JKK1zg@70";
-    private const CHARSET = "utf8mb4";
+    private const HOST = $_ENV['HOST'];
+    private const DB = $_ENV['DB'];
+    private const USER = $_ENV['USER'];
+    private const PW = $_ENV['PW'];
+    private const CHARSET = $_ENV['CHARSET'];
 
     public function connect()
     {
