@@ -17,7 +17,7 @@ $user = $stmt->fetch();
 
 if (empty($user)) {
   $err = "Kullanıcı bulunamadı!";
-  require_once ('userError.php');
+  require_once 'userError.php';
   return;
 }
 
