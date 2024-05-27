@@ -1,0 +1,17 @@
+{
+    "name": "deger/htdocs-projectofwbp",
+    "description": "Project for WBP",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Project\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Aytgg",
+            "email": "aytugdeger.2003@gmail.com"
+        }
+    ],
+    "require": {}
+}
