@@ -2,7 +2,7 @@
 
 namespace Project\Classes;
 
-require_once __DIR__ . '/envloader.php';
+require_once __DIR__ . '/../../envloader.php';
 
 use PDO;
 use PDOException;
@@ -10,21 +10,25 @@ use PDOException;
 class DB
 {
     private $conn;
-    private const HOST = $_ENV['HOST'];
+    /*private const HOST = $_ENV['HOST'];
     private const DB = $_ENV['DB'];
     private const USER = $_ENV['USER'];
     private const PW = $_ENV['PW'];
-    private const CHARSET = $_ENV['CHARSET'];
+    private const CHARSET = $_ENV['CHARSET'];*/
 
     public function connect()
     {
         $conn = null;
 
         try {
-            $dsn = 'mysql:host=' . self::HOST
+            /*$dsn = 'mysql:host=' . self::HOST
                 . ';dbname=' . self::DB
-                . ';charset=' . self::CHARSET;
-            $conn = new PDO($dsn, self::USER, self::PW);
+                . ';charset=' . self::CHARSET;*/
+            // $conn = new PDO($dsn, self::USER, self::PW);
+            $dsn = 'mysql:host=' . $_ENV['HOST']
+                . ';dbname=' . $_ENV['DB']
+                . ';charset=' . $_ENV['CHARSET'];
+            $conn = new PDO($dsn, $_ENV['USER'], $_ENV['PW']);
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $conn->exec("SET COLLATION_CONNECTION = 'utf8mb4_turkish_ci'");
 
