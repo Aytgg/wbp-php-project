@@ -2,6 +2,8 @@
 require_once __DIR__ . '/vendor/autoload.php';
 require_once __DIR__ . '/envloader.php';
 
+session_start();
+
 // use Project\Handlers\Contact;
 use Project\Handlers\User;
 

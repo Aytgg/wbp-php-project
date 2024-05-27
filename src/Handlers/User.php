@@ -3,8 +3,6 @@
 namespace Project\Handlers;
 
 use Project\Classes\DB;
-use PDO;
-use PDOException;
 
 class User
 {
@@ -129,7 +127,7 @@ class User
         require_once __DIR__ . '/../../views/user.php';
     }
 
-    public static function update(array $params = []): void
+    public static function update($params): void
     {
         if (isset($params['id'])) {
             
