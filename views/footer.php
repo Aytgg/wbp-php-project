@@ -64,7 +64,7 @@
                         <a class="mr-md-3" href="./">
                             <button class="btn btn-primary"> Ana Sayfa </button>
                         </a>
-                        <a class="mr-md-3" href="https://github.com/Aytgg">
+                        <a class="mr-md-3" href="https://github.com/Aytgg/wbp-php-project.git">
                             <button class='btn btn-warning'> Github </button>
                         </a>
                         </br></br>
